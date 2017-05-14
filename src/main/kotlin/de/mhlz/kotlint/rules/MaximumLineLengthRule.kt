@@ -1,9 +1,9 @@
 package de.mhlz.kotlint.rules
 
-import de.mhlz.kotlint.Config
 import de.mhlz.kotlint.Emitter
 import de.mhlz.kotlint.ProblemLevel
 import de.mhlz.kotlint.Rule
+import de.mhlz.kotlint.load
 import org.jetbrains.kotlin.KtNodeTypes
 import org.jetbrains.kotlin.com.intellij.psi.PsiElement
 import org.jetbrains.kotlin.com.intellij.psi.tree.TokenSet
@@ -14,7 +14,7 @@ import org.jetbrains.kotlin.psi.KtFile
  */
 class MaximumLineLengthRule : Rule("maximum-line-length") {
 
-    private val maxLength: Int = Config["maximum-line-length"]["length"] as Int
+    private val maxLength: Int = load("length").asInt() ?: 100
 
     override fun lint(node: PsiElement, emit: Emitter) {
         if (node is KtFile) {

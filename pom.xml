@@ -34,15 +34,10 @@
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-coroutines-core</artifactId>
-            <version>0.15</version>
-        </dependency>
 
         <dependency>
-            <groupId>com.github.mhlz</groupId>
-            <artifactId>kotlint</artifactId>
+            <groupId>com.github.mhlz.kotlint</groupId>
+            <artifactId>kotlint-rules</artifactId>
             <version>master-SNAPSHOT</version>
         </dependency>
 
